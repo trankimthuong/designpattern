@@ -1,0 +1,4 @@
+Với Remote Proxy, proxy class và real class nằm ở 2 địa chỉ khác nhau. Thông qua network, proxy class sẽ encode và gửi request tới real class để khởi tạo, truy xuất, …
+
+Chúng ta có thể thấy remote Proxy khi implements Java RMI hoặc thông dụng nhất là ở WebService. Bên phía client sẽ có 1 proxy class, client sẽ khởi tạo proxy class
+và gọi tới real class nằm ở 1 địa chỉ khác.

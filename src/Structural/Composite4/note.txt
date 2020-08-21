@@ -1,0 +1,25 @@
+Composite là một mẫu thiết kế thuộc nhóm cấu trúc (Structural Pattern). Composite Pattern là một sự tổng hợp những thành phần có quan hệ với nhau để tạo ra thành phần lớn hơn.
+Nó cho phép thực hiện các tương tác với tất cả đối tượng trong mẫu tương tự nhau.
+Composite Pattern được sử dụng khi chúng ta cần xử lý một nhóm đối tượng tương tự theo cách xử lý 1 object.
+Composite pattern sắp xếp các object theo cấu trúc cây để diễn giải 1 phần cũng như toàn bộ hệ thống phân cấp.
+Pattern này tạo một lớp chứa nhóm đối tượng của riêng nó. Lớp này cung cấp các cách để sửa đổi nhóm của cùng 1 object.
+Pattern này cho phép Client có thể viết code giống nhau để tương tác với composite object này, bất kể đó là một đối tượng riêng lẻ hay tập hợp các đối tượng.
+
+ví dụ: Một hệ thống tập tin là một cấu trúc cây có chứa các nhánh là các thư mục (folder – composite), cũng như các nút lá là các tệp (file – leaf).
+ Một folder có thể chứa một hoặc nhiều file hoặc folder. Do đó, folder là một đối tượng phức tạp và file là một đối tượng đơn giản.
+ File và Folder có nhiều thao tác và thuộc tính chung, chẳng hạn như: di chuyển (cut) , sao chép (copy), liệt kê (view) hoặc các thuộc tính thư mục như tên tệp và kích thước.
+
+ Một Composite Pattern bao gồm các thành phần cơ bản sau:
+
+ - Base Component : là một interface hoặc abstract class quy định các method chung cần phải có cho tất cả các thành phần tham gia vào mẫu này.
+ - Leaf : là lớp hiện thực (implements) các phương thức của Component. Nó là các object không có con.
+ - Composite : lưu trữ tập hợp các Leaf và cài đặt các phương thức của Base Component. Composite cài đặt các phương thức được định nghĩa trong interface Component
+  bằng cách ủy nhiệm cho các thành phần con xử lý.
+ - Client: sử dụng Base Component để làm việc với các đối tượng trong Composite.
+
+ Lợi ích:
+ Cung cấp cùng một cách sử dụng đối với từng đối tượng riêng lẻ hoặc nhóm các đối tượng với nhau.
+
+ Sử dụng composite khi nào:
+ Composite Pattern chỉ nên được áp dụng khi nhóm đối tượng phải hoạt động như một đối tượng duy nhất (theo cùng một cách).
+ Composite Pattern có thể được sử dụng để tạo ra một cấu trúc giống như cấu trúc cây.
