@@ -1,0 +1,6 @@
+Trì hoãn việc tạo ra real subject bên trong proxy class. Chỉ đến khi cần, proxy class mới thật sự khởi tạo real class. Loại Proxy này làm việc theo cơ chế Lazy Loading.
+Lazy Loading là một khái niệm mà ứng dụng trì hoãn việc tải các đối tượng cho đến thời điểm mà người dùng cần nó. Nói một cách đơn giản là tải theo yêu cầu của người dùng
+chứ không phải tải đối tượng không cần thiết. Lợi ích của việc này là giảm thiểu số lượng yêu cầu, giảm thiểu số lượng tài nguyên thừa cần tải cho tới khi người dùng cần
+đến chúng thực sự
+Nó giải quyết vấn đề rất lớn về hiệu suất, lý do là vì proxy class có chi phí khởi tạo rất ít, việc duy trì nó không mất nhiều tài nguyên hệ thống.
+Trong khi đó Real class thường rất tốn chi phí , vì thế với virtual proxies, chỉ khi nào cần thiết, real class mới được khởi tạo.

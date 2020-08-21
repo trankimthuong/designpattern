@@ -1,0 +1,8 @@
+Proxy Class sẽ thay đổi hoặc thêm 1 số thao tác trước khi gọi tới real class. Một số trường hợp thường thấy là:
+
+ - Ở lần đâu tiên khởi tạo real class, Proxy class sẽ lưu lại thông tin của real class vào cache và hữu dụng cho lần tái sử dụng sau. Ta có thể thấy việc xuất hiện ở
+lazy-load ở các connection xuống database.
+ - Trước khi gọi real class, ta có thể lock real class lại và không cho các thread khác phải chờ cho tới khi thread hiện tại release real class.
+Đếm số lượng reference tới real class.
+Ở Virtual Proxy, mình cũng có lồng 1 ví dụ của Smart Proxy vào. Khi ta khởi tạo RealImage, mình đã lưu cache RealImage lại và lần sau gọi hàm ShowImage(),
+ta không phải khởi tạo lại RealImage.
